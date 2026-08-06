@@ -1,636 +1,1009 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Aditya Website Design</title><meta name="description" content="Aditya Website Design - Modern, professional and responsive websites for your business."><style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
 
-/* =========================
-   BASIC SETTINGS
-========================= */
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
+  <meta name="description"
+        content="Aditya Website Design - Professional, modern and responsive websites for businesses.">
 
-body{
-    font-family:Arial, sans-serif;
-    background:#06152f;
-    color:white;
-    line-height:1.6;
-}
+  <meta name="theme-color"
+        content="#071a3d">
 
-a{
-    text-decoration:none;
-    color:white;
-}
+  <title>Aditya Website Design | Modern Business Websites</title>
 
-.container{
-    width:90%;
-    max-width:1100px;
-    margin:auto;
-}
+  <style>
 
+    /* =========================
+       RESET
+    ========================= */
 
-/* =========================
-   NAVBAR
-========================= */
-
-nav{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:#071b3a;
-    border-bottom:1px solid rgba(77,184,255,0.2);
-}
-
-.navbar{
-    min-height:75px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-.logo-area{
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-
-.logo-area img{
-    width:48px;
-    height:48px;
-    object-fit:contain;
-    border-radius:10px;
-}
-
-.logo-text{
-    color:#4db8ff;
-    font-weight:bold;
-    font-size:17px;
-}
-
-.nav-links{
-    display:flex;
-    gap:25px;
-}
-
-.nav-links a{
-    color:#dceeff;
-    transition:0.3s;
-}
-
-.nav-links a:hover{
-    color:#4db8ff;
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-    min-height:90vh;
-    display:flex;
-    align-items:center;
-    text-align:center;
-
-    background:
-    radial-gradient(circle at top,#123d78 0%,#06152f 55%);
-}
-
-.hero-content{
-    width:100%;
-    animation:fadeUp 1s ease;
-}
-
-.hero-logo{
-    width:170px;
-    max-width:60%;
-    margin-bottom:20px;
-    filter:drop-shadow(0 0 25px rgba(77,184,255,0.4));
-}
-
-.hero h1{
-    color:#4db8ff;
-    font-size:48px;
-    margin-bottom:10px;
-}
-
-.hero h2{
-    font-size:25px;
-    margin-bottom:15px;
-}
-
-.hero p{
-    max-width:650px;
-    margin:0 auto 25px;
-    color:#c8ddf3;
-}
-
-.btn{
-    display:inline-block;
-    background:#00aaff;
-    padding:14px 25px;
-    border-radius:30px;
-    margin:7px;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-.btn:hover{
-    transform:translateY(-4px);
-    background:#008ed6;
-    box-shadow:0 10px 25px rgba(0,170,255,0.3);
-}
-
-.btn-outline{
-    background:transparent;
-    border:1px solid #00aaff;
-}
-
-
-/* =========================
-   SECTIONS
-========================= */
-
-section{
-    padding:80px 0;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:45px;
-}
-
-.section-title h2{
-    color:#4db8ff;
-    font-size:35px;
-    margin-bottom:8px;
-}
-
-.section-title p{
-    color:#b8cce3;
-}
-
-
-/* =========================
-   SERVICES
-========================= */
-
-.services{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.card{
-    background:linear-gradient(145deg,#0d294f,#091d3c);
-    padding:30px 20px;
-    border-radius:18px;
-    text-align:center;
-    border:1px solid rgba(77,184,255,0.15);
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-    border-color:#4db8ff;
-    box-shadow:0 15px 35px rgba(0,0,0,0.3);
-}
-
-.icon{
-    font-size:42px;
-    margin-bottom:15px;
-}
-
-.card h3{
-    color:#4db8ff;
-    margin-bottom:10px;
-}
-
-.card p{
-    color:#bdd0e6;
-}
-
-
-/* =========================
-   PORTFOLIO
-========================= */
-
-.portfolio{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.project{
-    background:#0d2345;
-    padding:30px 20px;
-    border-radius:18px;
-    text-align:center;
-    border:1px solid rgba(77,184,255,0.15);
-    transition:0.3s;
-}
-
-.project:hover{
-    transform:translateY(-6px);
-    border-color:#4db8ff;
-}
-
-.project h3{
-    color:#4db8ff;
-    margin-bottom:10px;
-}
-
-.project p{
-    color:#bdd0e6;
-}
-
-
-/* =========================
-   ABOUT
-========================= */
-
-.about-box{
-    background:#0b2345;
-    padding:40px 25px;
-    border-radius:20px;
-    text-align:center;
-    border:1px solid rgba(77,184,255,0.15);
-}
-
-.about-box p{
-    color:#c9d9eb;
-    max-width:750px;
-    margin:auto;
-}
-
-
-/* =========================
-   WHY CHOOSE ME
-========================= */
-
-.features{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
-}
-
-.feature{
-    background:#0b2345;
-    padding:22px;
-    border-radius:15px;
-    border-left:3px solid #00aaff;
-}
-
-.feature strong{
-    color:#4db8ff;
-}
-
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact-box{
-    text-align:center;
-    background:linear-gradient(145deg,#0d2e5c,#081d3d);
-    padding:50px 20px;
-    border-radius:25px;
-    border:1px solid rgba(77,184,255,0.2);
-}
-
-.contact-box h2{
-    color:#4db8ff;
-    font-size:30px;
-    margin-bottom:10px;
-}
-
-.contact-box p{
-    color:#c8d9ea;
-    margin-bottom:20px;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-    background:#041022;
-    text-align:center;
-    padding:30px 15px;
-    color:#a9c2dc;
-}
-
-footer strong{
-    color:#4db8ff;
-}
-
-
-/* =========================
-   FLOATING WHATSAPP
-========================= */
-
-.whatsapp{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-
-    width:60px;
-    height:60px;
-
-    border-radius:50%;
-
-    background:#25D366;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:29px;
-
-    z-index:999;
-
-    box-shadow:0 5px 20px rgba(0,0,0,0.4);
-
-    animation:pulse 2s infinite;
-}
-
-
-/* =========================
-   ANIMATIONS
-========================= */
-
-@keyframes fadeUp{
-
-    from{
-        opacity:0;
-        transform:translateY(30px);
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    to{
-        opacity:1;
-        transform:translateY(0);
+    html {
+      scroll-behavior: smooth;
     }
 
-}
-
-@keyframes pulse{
-
-    0%{
-        box-shadow:0 0 0 0 rgba(37,211,102,0.5);
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #06152f;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
 
-    70%{
-        box-shadow:0 0 0 15px rgba(37,211,102,0);
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
-    100%{
-        box-shadow:0 0 0 0 rgba(37,211,102,0);
+    img {
+      max-width: 100%;
+      display: block;
     }
 
-}
 
+    /* =========================
+       NAVBAR
+    ========================= */
 
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:800px){
-
-    .nav-links{
-        display:none;
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(6, 21, 47, 0.92);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
-    .navbar{
-        padding:10px 0;
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 25px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    .hero{
-        min-height:85vh;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 20px;
+      font-weight: bold;
     }
 
-    .hero h1{
-        font-size:34px;
+    .brand img {
+      width: 45px;
+      height: 45px;
+      object-fit: contain;
+      border-radius: 50%;
     }
 
-    .hero h2{
-        font-size:20px;
+    nav {
+      display: flex;
+      gap: 25px;
+      align-items: center;
     }
 
-    .hero-logo{
-        width:140px;
+    nav a {
+      color: #dce8ff;
+      font-weight: 600;
+      transition: 0.3s;
     }
 
-    .services,
-    .portfolio{
-        grid-template-columns:1fr;
+    nav a:hover {
+      color: #20b7ff;
     }
 
-    .features{
-        grid-template-columns:1fr;
+    .menu-btn {
+      display: none;
+      border: none;
+      background: transparent;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
     }
 
-    section{
-        padding:60px 0;
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 90vh;
+      padding: 70px 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background:
+        radial-gradient(circle at 20% 20%, rgba(0,180,255,0.15), transparent 35%),
+        radial-gradient(circle at 80% 80%, rgba(0,90,255,0.18), transparent 35%);
     }
 
-    .section-title h2{
-        font-size:30px;
+    .hero-container {
+      max-width: 1200px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
     }
 
-}
-
-
-/* =========================
-   SMALL PHONES
-========================= */
-
-@media(max-width:400px){
-
-    .logo-text{
-        font-size:14px;
+    .hero-text h1 {
+      font-size: clamp(42px, 6vw, 75px);
+      line-height: 1.05;
+      margin-bottom: 25px;
     }
 
-    .logo-area img{
-        width:40px;
-        height:40px;
+    .gradient-text {
+      background: linear-gradient(90deg, #20b7ff, #7ce8ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    .hero h1{
-        font-size:29px;
+    .hero-text p {
+      color: #b9c8e6;
+      font-size: 19px;
+      max-width: 570px;
+      margin-bottom: 30px;
     }
 
-    .btn{
-        padding:12px 20px;
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
     }
 
-}
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 50px;
+      font-weight: bold;
+      transition: 0.3s;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
 
-</style></head><body><!-- =========================
-     NAVBAR
-========================= --><nav><div class="container navbar"><a href="#home" class="logo-area"><img src="logo.png" alt="Aditya Website Design Logo"><span class="logo-text">
-Aditya Website Design
-</span></a><div class="nav-links"><a href="#home">Home</a>
+    .btn-primary {
+      background: #08aef5;
+      color: white;
+      box-shadow: 0 10px 30px rgba(8,174,245,0.25);
+    }
 
-<a href="#services">Services</a>
+    .btn-primary:hover {
+      transform: translateY(-4px);
+      background: #0099df;
+    }
 
-<a href="#portfolio">Portfolio</a>
+    .btn-secondary {
+      background: rgba(255,255,255,0.06);
+      color: white;
+    }
 
-<a href="#about">About</a>
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.12);
+      transform: translateY(-4px);
+    }
 
-<a href="#contact">Contact</a>
 
-</div></div></nav><!-- =========================
-     HOME / HERO
-========================= --><section class="hero" id="home"><div class="container hero-content"><img
-src="logo.png"
-class="hero-logo"
-alt="Aditya Website Design Logo"
+    /* =========================
+       VIDEO
+    ========================= */
 
-«»
+    .video-box {
+      position: relative;
+      border-radius: 25px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.15);
+      box-shadow: 0 25px 70px rgba(0,0,0,0.45);
+      background: #000;
+    }
 
-<h1>
-Aditya Website Design
-</h1><h2>
-Modern Websites For Your Business
-</h2><p>
-I create professional, responsive and attractive
-websites that help businesses build a strong
-online presence.
-</p><a href="#services" class="btn">
-View Services
-</a><a
-href="https://wa.me/916230791016"
-class="btn btn-outline"
+    .video-box video {
+      width: 100%;
+      display: block;
+    }
 
-«»
+    .video-label {
+      position: absolute;
+      left: 15px;
+      bottom: 15px;
 
-Contact Me
-</a>
+      background: rgba(0,0,0,0.65);
+      padding: 8px 14px;
+      border-radius: 30px;
 
-</div></section><!-- =========================
-     SERVICES
-========================= --><section id="services"><div class="container"><div class="section-title"><h2>
-My Services
-</h2><p>
-Professional website solutions for your business.
-</p></div><div class="services"><div class="card"><div class="icon">
-💻
-</div><h3>
-Business Website
-</h3><p>
-Professional websites for companies,
-shops and small businesses.
-</p></div><div class="card"><div class="icon">
-🚀
-</div><h3>
-Landing Page Design
-</h3><p>
-Modern landing pages designed to
-promote your products and services.
-</p></div><div class="card"><div class="icon">
-🔧
-</div><h3>
-Website Maintenance
-</h3><p>
-Updates, improvements and support
-for your existing website.
-</p></div></div></div></section><!-- =========================
-     PORTFOLIO
-========================= --><section id="portfolio"><div class="container"><div class="section-title"><h2>
-My Portfolio
-</h2><p>
-Some of my website design projects.
-</p></div><div class="portfolio"><div class="project"><div class="icon">
-🌐
-</div><h3>
-Business Website
-</h3><p>
-Modern website design for a business.
-</p></div><div class="project"><div class="icon">
-📱
-</div><h3>
-Responsive Website
-</h3><p>
-Websites that look great on mobile,
-tablet and desktop.
-</p></div><div class="project"><div class="icon">
-🎨
-</div><h3>
-Custom Website Design
-</h3><p>
-Unique website designs based on
-your business requirements.
-</p></div></div></div></section><!-- =========================
-     ABOUT
-========================= --><section id="about"><div class="container"><div class="section-title"><h2>
-About Me
-</h2><p>
-Let's create something great together.
-</p></div><div class="about-box"><p>
-Welcome to <strong>Aditya Website Design</strong>.
-I create modern, responsive and professional
-websites for businesses and individuals.
-My goal is to provide clean, attractive and
-easy-to-use websites that help businesses
-grow online.
-</p></div></div></section><!-- =========================
-     WHY CHOOSE ME
-========================= --><section><div class="container"><div class="section-title"><h2>
-Why Choose Me?
-</h2><p>
-What you can expect from my website service.
-</p></div><div class="features"><div class="feature"><strong>
-✓ Modern Design
-</strong><p>
-Clean and professional website layouts.
-</p></div><div class="feature"><strong>
-✓ Mobile Friendly
-</strong><p>
-Your website will work properly on smartphones.
-</p></div><div class="feature"><strong>
-✓ Responsive
-</strong><p>
-Designed for mobile, tablet and desktop.
-</p></div><div class="feature"><strong>
-✓ Personal Support
-</strong><p>
-Direct communication and website support.
-</p></div></div></div></section><!-- =========================
-     CONTACT
-========================= --><section id="contact"><div class="container"><div class="contact-box"><h2>
-Let's Build Your Website 🚀
-</h2><p>
-Have a business and need a professional website?
-Let's work together.
-</p><p>
-📱 WhatsApp: 6230791016
-</p><a
-href="https://wa.me/916230791016"
-class="btn"
+      font-size: 13px;
+      backdrop-filter: blur(10px);
+    }
 
-«»
 
-Chat on WhatsApp
-</a>
+    /* =========================
+       SECTION
+    ========================= */
 
-</div></div></section><!-- =========================
-     FOOTER
-========================= --><footer><p>
-© 2026 <strong>Aditya Website Design</strong>
-</p><p>
-Modern Websites • Responsive Design • Business Solutions
-</p></footer><!-- =========================
-     FLOATING WHATSAPP
-========================= --><a
-href="https://wa.me/916230791016"
-class="whatsapp"
-aria-label="Contact Aditya Website Design on WhatsApp"
+    section {
+      padding: 90px 20px;
+    }
 
-«»
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
 
-💬
-</a>
+    .section-title {
+      text-align: center;
+      margin-bottom: 55px;
+    }
 
-</body></html>
+    .section-title h2 {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: #9fb1d1;
+      max-width: 650px;
+      margin: auto;
+    }
+
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .service-card {
+      background: linear-gradient(
+        145deg,
+        rgba(24,55,103,0.8),
+        rgba(10,31,66,0.9)
+      );
+
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 22px;
+      padding: 35px 25px;
+
+      transition: 0.35s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(32,183,255,0.5);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    }
+
+    .service-icon {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: #aebedb;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about h2 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      color: #b3c1db;
+      margin-bottom: 15px;
+    }
+
+    .features {
+      display: grid;
+      gap: 15px;
+    }
+
+    .feature {
+      padding: 20px;
+      border-radius: 15px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .feature strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #20b7ff;
+    }
+
+
+    /* =========================
+       PROCESS
+    ========================= */
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 20px;
+    }
+
+    .step {
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    .step-number {
+      width: 55px;
+      height: 55px;
+      margin: 0 auto 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+      background: #0caef2;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .step p {
+      color: #9fb1d1;
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      text-align: center;
+      padding: 75px 20px;
+      border-radius: 30px;
+
+      background:
+        radial-gradient(circle at center, rgba(0,174,255,0.22), transparent 60%),
+        rgba(255,255,255,0.04);
+
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .cta h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: #b4c3dd;
+      max-width: 650px;
+      margin: 0 auto 30px;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-box {
+      text-align: center;
+      background: rgba(255,255,255,0.05);
+      border-radius: 25px;
+      padding: 50px 20px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .contact-box h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .contact-box p {
+      color: #aebedb;
+      margin-bottom: 25px;
+    }
+
+
+    /* =========================
+       WHATSAPP FLOAT
+    ========================= */
+
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 2000;
+
+      width: 62px;
+      height: 62px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+
+      font-size: 30px;
+
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+
+      0% {
+        box-shadow: 0 0 0 0 rgba(37,211,102,0.5);
+      }
+
+      70% {
+        box-shadow: 0 0 0 18px rgba(37,211,102,0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(37,211,102,0);
+      }
+
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      margin-top: 80px;
+      padding: 35px 20px;
+
+      text-align: center;
+
+      background: #040f22;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    footer img {
+      width: 50px;
+      margin: 0 auto 12px;
+    }
+
+    footer p {
+      color: #8495b5;
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       ANIMATION
+    ========================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: 0.7s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        right: 0;
+
+        display: none;
+        flex-direction: column;
+
+        padding: 25px;
+        background: #071a3d;
+
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .hero-container,
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 50px;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .process {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-text {
+        text-align: center;
+      }
+
+      .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+    }
+
+
+    @media (max-width: 500px) {
+
+      .navbar {
+        padding: 12px 15px;
+      }
+
+      .brand {
+        font-size: 16px;
+      }
+
+      .brand img {
+        width: 38px;
+        height: 38px;
+      }
+
+      .section-title h2,
+      .about h2,
+      .cta h2,
+      .contact-box h2 {
+        font-size: 32px;
+      }
+
+      .process {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 65px 15px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       NAVBAR
+  ========================= -->
+
+  <header>
+
+    <div class="navbar">
+
+      <a href="#home" class="brand">
+
+        <img src="logo.png" alt="Aditya Website Design Logo">
+
+        <span>Aditya Website Design</span>
+
+      </a>
+
+
+      <button class="menu-btn"
+              onclick="toggleMenu()"
+              aria-label="Open Menu">
+
+        ☰
+
+      </button>
+
+
+      <nav id="nav">
+
+        <a href="#home">Home</a>
+
+        <a href="#services">Services</a>
+
+        <a href="#about">About</a>
+
+        <a href="#process">Process</a>
+
+        <a href="#contact">Contact</a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-container">
+
+
+      <div class="hero-text reveal">
+
+        <h1>
+
+          Build Your
+
+          <span class="gradient-text">
+            Digital Presence
+          </span>
+
+        </h1>
+
+
+        <p>
+
+          We create modern, responsive and professional
+          websites that help businesses look better,
+          connect with customers and grow online.
+
+        </p>
+
+
+        <div class="buttons">
+
+          <a class="btn btn-primary"
+             href="https://wa.me/916230791016?text=Hello%20Aditya%2C%20I%20want%20a%20professional%20website.">
+
+            💬 Start a Project
+
+          </a>
+
+
+          <a class="btn btn-secondary"
+             href="#services">
+
+            Explore Services →
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- VIDEO -->
+
+      <div class="video-box reveal">
+
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          controls
+          preload="metadata">
+
+          <source
+            src="aditya_web_design_60sec_with_tune.mp4"
+            type="video/mp4">
+
+          Your browser does not support video.
+
+        </video>
+
+
+        <div class="video-label">
+
+          🎬 Website Design in Action
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       SERVICES
+  ========================= -->
+
+  <section id="services">
+
+    <div class="container">
+
+
+      <div class="section-title reveal">
+
+        <h2>Our Services</h2>
+
+        <p>
+          Everything you need to create a strong
+          and professional online presence.
+        </p>
+
+      </div>
+
+
+      <div class="services">
+
+
+        <div class="service-card reveal">
+
+          <div class="service-icon">💻</div>
+
+          <h3>Business Websites</h3>
+
+          <p>
+            Professional websites for companies,
+            shops, startups and local businesses.
+          </p>
+
+        </div>
+
+
+        <div class="service-card reveal">
+
+          <div class="service-icon">🚀</div>
+
+          <h3>Landing Pages</h3>
+
+          <p>
+            High-quality landing pages designed
+            to attract visitors and generate leads.
+          </p>
+
+        </div>
+
+
+        <div class="service-card reveal">
+
+          <div class="service-icon">📱</div>
+
+          <h3>Responsive Design</h3>
+
+          <p>
+            Your website will look great on phones,
+            tablets and computers.
+          </p>
+
+        </div>
+
+
+        <div class="service-card reveal">
+
+          <div class="service-icon">🎨</div>
+
+          <h3>Modern UI Design</h3>
+
+          <p>
+            Clean, attractive and modern designs
+            that make your brand stand out.
+          </p>
+
+        </div>
+
+
+        <div class="service-card reveal">
+
+          <div class="service-icon">⚡</div>
+
+          <h3>Fast Websites</h3>
+
+          <p>
+            Lightweight websites designed to load
+            quickly and provide a smooth experience.
+          </p>
+
+        </div>
+
+
+        <div class="service-card reveal">
+
+          <div class="service-icon">🛠️</div>
+
+          <h3>Website Updates</h3>
+
+          <p>
+            Need changes or improvements?
+            We can help update your website.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       ABOUT
+  ========================= -->
+
+  <section id="about">
+
+    <div class="container">
+
+      <div class="about">
+
+
+        <div class="reveal">
+
+          <h2>
+
+            Websites That Make
+
+            <span class="gradient-text">
+              Your Business Stand Out
+            </span>
+
+          </h2>
+
+
+          <p>
+
+            A website is often the first impression
+            customers have of your business.
+
+          </p>
+
+
+          <p>
+
+            That's why we focus on creating websites
+            that are beautiful, simple to use,
+            mobile-friendly and professional.
+
+          </p>
+
+
+          <a class="btn btn-primary"
+             href="#contact">
+
+            Let's Build Your Website
+
+          </a>
+
+        </div>
+
+
+
+        <div class="features reveal">
+
+
+          <div class="feature">
+
+            <strong>✓ Professional Design</strong>
+
+            Modern layouts designed for your business.
+
+          </div>
+
+
+          <div class="feature">
+
+            <strong>✓ Mobile Friendly</strong>
+
+            Perfect experience on smartphones and tablets.
+
+          </div>
+
+
+          <div class="feature">
+
+            <strong>✓ Easy to Use</strong>
+
+            Simple navigation for your customers.
+
+          </div>
+
+
+          <div class="feature">
+
+            <strong>✓ Business Focused</strong>
+
+            Designed to help you grow online.
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       PROCESS
+  ========================= -->
+
+  <section id="process">
+
+    <div class="container">
+
+
+      <div class="section-title reveal">
+
+        <h2>How We Work</h2>
+
+        <p>
+          Simple process. Professional result.
+        </p>
+
+      </div>
+
+
+      <div class="process">
+
+
+        <div class="step reveal">
+
+          <div class="step-number">1</div>
+
+          <h3>Discuss</h3>
+
+          <p>
+            We understand your business and requirements.
+          </p>
+
+        </div>
+
+
+        <div class="step
