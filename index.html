@@ -1,673 +1,636 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aditya Website Design</title>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Aditya Website Design</title><meta name="description" content="Aditya Website Design - Modern, professional and responsive websites for your business."><style>
 
-<style>
-body{
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
     font-family:Arial, sans-serif;
     background:#06152f;
     color:white;
-}
-
-header{
-    background:#0b2a5b;
-    padding:25px;
-    text-align:center;
-}
-
-h1{
-    color:#4db8ff;
-}
-
-section{
-    padding:30px;
-    text-align:center;
-}
-
-.card{
-    background:#0d2345;
-    margin:15px;
-    padding:20px;
-    border-radius:15px;
-}
-
-button{
-    background:#00aaff;
-    color:white;
-    border:none;
-    padding:15px 25px;
-    border-radius:30px;
-    font-size:16px;
+    line-height:1.6;
 }
 
 a{
-    color:white;
     text-decoration:none;
+    color:white;
 }
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#071b3a;
+    border-bottom:1px solid rgba(77,184,255,0.2);
+}
+
+.navbar{
+    min-height:75px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-area img{
+    width:48px;
+    height:48px;
+    object-fit:contain;
+    border-radius:10px;
+}
+
+.logo-text{
+    color:#4db8ff;
+    font-weight:bold;
+    font-size:17px;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color:#dceeff;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#4db8ff;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    text-align:center;
+
+    background:
+    radial-gradient(circle at top,#123d78 0%,#06152f 55%);
+}
+
+.hero-content{
+    width:100%;
+    animation:fadeUp 1s ease;
+}
+
+.hero-logo{
+    width:170px;
+    max-width:60%;
+    margin-bottom:20px;
+    filter:drop-shadow(0 0 25px rgba(77,184,255,0.4));
+}
+
+.hero h1{
+    color:#4db8ff;
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+.hero h2{
+    font-size:25px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:650px;
+    margin:0 auto 25px;
+    color:#c8ddf3;
+}
+
+.btn{
+    display:inline-block;
+    background:#00aaff;
+    padding:14px 25px;
+    border-radius:30px;
+    margin:7px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    background:#008ed6;
+    box-shadow:0 10px 25px rgba(0,170,255,0.3);
+}
+
+.btn-outline{
+    background:transparent;
+    border:1px solid #00aaff;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    color:#4db8ff;
+    font-size:35px;
+    margin-bottom:8px;
+}
+
+.section-title p{
+    color:#b8cce3;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:linear-gradient(145deg,#0d294f,#091d3c);
+    padding:30px 20px;
+    border-radius:18px;
+    text-align:center;
+    border:1px solid rgba(77,184,255,0.15);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#4db8ff;
+    box-shadow:0 15px 35px rgba(0,0,0,0.3);
+}
+
+.icon{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#4db8ff;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#bdd0e6;
+}
+
+
+/* =========================
+   PORTFOLIO
+========================= */
+
+.portfolio{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.project{
+    background:#0d2345;
+    padding:30px 20px;
+    border-radius:18px;
+    text-align:center;
+    border:1px solid rgba(77,184,255,0.15);
+    transition:0.3s;
+}
+
+.project:hover{
+    transform:translateY(-6px);
+    border-color:#4db8ff;
+}
+
+.project h3{
+    color:#4db8ff;
+    margin-bottom:10px;
+}
+
+.project p{
+    color:#bdd0e6;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-box{
+    background:#0b2345;
+    padding:40px 25px;
+    border-radius:20px;
+    text-align:center;
+    border:1px solid rgba(77,184,255,0.15);
+}
+
+.about-box p{
+    color:#c9d9eb;
+    max-width:750px;
+    margin:auto;
+}
+
+
+/* =========================
+   WHY CHOOSE ME
+========================= */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.feature{
+    background:#0b2345;
+    padding:22px;
+    border-radius:15px;
+    border-left:3px solid #00aaff;
+}
+
+.feature strong{
+    color:#4db8ff;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-box{
+    text-align:center;
+    background:linear-gradient(145deg,#0d2e5c,#081d3d);
+    padding:50px 20px;
+    border-radius:25px;
+    border:1px solid rgba(77,184,255,0.2);
+}
+
+.contact-box h2{
+    color:#4db8ff;
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.contact-box p{
+    color:#c8d9ea;
+    margin-bottom:20px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     background:#041022;
     text-align:center;
-    padding:15px;
-}
-</style>
-
-</head>
-
-<body>
-
-<header>
-<h1>Aditya Website Design</h1>
-<p>Modern Websites For Your Business</p>
-</header>
-
-<section>
-<h2>Welcome</h2>
-<p>
-We create professional and responsive websites
-to help your business grow online.
-</p>
-
-<a href="https://wa.me/916230791016">
-<button>Contact on WhatsApp</button>
-</a>
-
-</section>
-
-
-<section>
-<h2>Our Services</h2>
-
-<div class="card">
-<h3>Business Website</h3>
-<p>Professional websites for companies and shops.</p>
-</div>
-
-<div class="card">
-<h3>Landing Page Design</h3>
-<p>Attractive pages to promote your services.</p>
-</div>
-
-<div class="card">
-<h3>Website Maintenance</h3>
-<p>Updates and support for your website.</p>
-</div>
-
-</section>
-
-
-<section>
-<h2>Contact</h2>
-<p>WhatsApp: 6230791016</p>
-</section>
-
-
-<footer>
-<p>© 2026 Aditya Website Design</p>
-</footer>
-
-</body>
-</html><!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aditya Website Design</title>
-
-<style>
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#06152f;
-    color:white;
+    padding:30px 15px;
+    color:#a9c2dc;
 }
 
-header{
-    background:#0b2a5b;
-    padding:25px;
-    text-align:center;
-}
-
-h1{
+footer strong{
     color:#4db8ff;
 }
 
-section{
-    padding:30px;
-    text-align:center;
+
+/* =========================
+   FLOATING WHATSAPP
+========================= */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+
+    width:60px;
+    height:60px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:29px;
+
+    z-index:999;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.4);
+
+    animation:pulse 2s infinite;
 }
 
-.card{
-    background:#0d2345;
-    margin:15px;
-    padding:20px;
-    border-radius:15px;
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
 }
 
-button{
-    background:#00aaff;
-    color:white;
-    border:none;
-    padding:15px 25px;
-    border-radius:30px;
-    font-size:16px;
+@keyframes pulse{
+
+    0%{
+        box-shadow:0 0 0 0 rgba(37,211,102,0.5);
+    }
+
+    70%{
+        box-shadow:0 0 0 15px rgba(37,211,102,0);
+    }
+
+    100%{
+        box-shadow:0 0 0 0 rgba(37,211,102,0);
+    }
+
 }
 
-a{
-    color:white;
-    text-decoration:none;
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .navbar{
+        padding:10px 0;
+    }
+
+    .hero{
+        min-height:85vh;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero h2{
+        font-size:20px;
+    }
+
+    .hero-logo{
+        width:140px;
+    }
+
+    .services,
+    .portfolio{
+        grid-template-columns:1fr;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:60px 0;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+
 }
 
-footer{
-    background:#041022;
-    text-align:center;
-    padding:15px;
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media(max-width:400px){
+
+    .logo-text{
+        font-size:14px;
+    }
+
+    .logo-area img{
+        width:40px;
+        height:40px;
+    }
+
+    .hero h1{
+        font-size:29px;
+    }
+
+    .btn{
+        padding:12px 20px;
+    }
+
 }
-</style>
 
-</head>
+</style></head><body><!-- =========================
+     NAVBAR
+========================= --><nav><div class="container navbar"><a href="#home" class="logo-area"><img src="logo.png" alt="Aditya Website Design Logo"><span class="logo-text">
+Aditya Website Design
+</span></a><div class="nav-links"><a href="#home">Home</a>
 
-<body>
+<a href="#services">Services</a>
 
-<header>
-<h1>Aditya Website Design</h1>
-<p>Modern Websites For Your Business</p>
-</header>
+<a href="#portfolio">Portfolio</a>
 
-<section>
-<h2>Welcome</h2>
-<p>
-We create professional and responsive websites
-to help your business grow online.
-</p>
+<a href="#about">About</a>
 
-<a href="https://wa.me/916230791016">
-<button>Contact on WhatsApp</button>
+<a href="#contact">Contact</a>
+
+</div></div></nav><!-- =========================
+     HOME / HERO
+========================= --><section class="hero" id="home"><div class="container hero-content"><img
+src="logo.png"
+class="hero-logo"
+alt="Aditya Website Design Logo"
+
+«»
+
+<h1>
+Aditya Website Design
+</h1><h2>
+Modern Websites For Your Business
+</h2><p>
+I create professional, responsive and attractive
+websites that help businesses build a strong
+online presence.
+</p><a href="#services" class="btn">
+View Services
+</a><a
+href="https://wa.me/916230791016"
+class="btn btn-outline"
+
+«»
+
+Contact Me
 </a>
 
-</section>
+</div></section><!-- =========================
+     SERVICES
+========================= --><section id="services"><div class="container"><div class="section-title"><h2>
+My Services
+</h2><p>
+Professional website solutions for your business.
+</p></div><div class="services"><div class="card"><div class="icon">
+💻
+</div><h3>
+Business Website
+</h3><p>
+Professional websites for companies,
+shops and small businesses.
+</p></div><div class="card"><div class="icon">
+🚀
+</div><h3>
+Landing Page Design
+</h3><p>
+Modern landing pages designed to
+promote your products and services.
+</p></div><div class="card"><div class="icon">
+🔧
+</div><h3>
+Website Maintenance
+</h3><p>
+Updates, improvements and support
+for your existing website.
+</p></div></div></div></section><!-- =========================
+     PORTFOLIO
+========================= --><section id="portfolio"><div class="container"><div class="section-title"><h2>
+My Portfolio
+</h2><p>
+Some of my website design projects.
+</p></div><div class="portfolio"><div class="project"><div class="icon">
+🌐
+</div><h3>
+Business Website
+</h3><p>
+Modern website design for a business.
+</p></div><div class="project"><div class="icon">
+📱
+</div><h3>
+Responsive Website
+</h3><p>
+Websites that look great on mobile,
+tablet and desktop.
+</p></div><div class="project"><div class="icon">
+🎨
+</div><h3>
+Custom Website Design
+</h3><p>
+Unique website designs based on
+your business requirements.
+</p></div></div></div></section><!-- =========================
+     ABOUT
+========================= --><section id="about"><div class="container"><div class="section-title"><h2>
+About Me
+</h2><p>
+Let's create something great together.
+</p></div><div class="about-box"><p>
+Welcome to <strong>Aditya Website Design</strong>.
+I create modern, responsive and professional
+websites for businesses and individuals.
+My goal is to provide clean, attractive and
+easy-to-use websites that help businesses
+grow online.
+</p></div></div></section><!-- =========================
+     WHY CHOOSE ME
+========================= --><section><div class="container"><div class="section-title"><h2>
+Why Choose Me?
+</h2><p>
+What you can expect from my website service.
+</p></div><div class="features"><div class="feature"><strong>
+✓ Modern Design
+</strong><p>
+Clean and professional website layouts.
+</p></div><div class="feature"><strong>
+✓ Mobile Friendly
+</strong><p>
+Your website will work properly on smartphones.
+</p></div><div class="feature"><strong>
+✓ Responsive
+</strong><p>
+Designed for mobile, tablet and desktop.
+</p></div><div class="feature"><strong>
+✓ Personal Support
+</strong><p>
+Direct communication and website support.
+</p></div></div></div></section><!-- =========================
+     CONTACT
+========================= --><section id="contact"><div class="container"><div class="contact-box"><h2>
+Let's Build Your Website 🚀
+</h2><p>
+Have a business and need a professional website?
+Let's work together.
+</p><p>
+📱 WhatsApp: 6230791016
+</p><a
+href="https://wa.me/916230791016"
+class="btn"
 
+«»
 
-<section>
-<h2>Our Services</h2>
-
-<div class="card">
-<h3>Business Website</h3>
-<p>Professional websites for companies and shops.</p>
-</div>
-
-<div class="card">
-<h3>Landing Page Design</h3>
-<p>Attractive pages to promote your services.</p>
-</div>
-
-<div class="card">
-<h3>Website Maintenance</h3>
-<p>Updates and support for your website.</p>
-</div>
-
-</section>
-
-
-<section>
-<h2>Contact</h2>
-<p>WhatsApp: 6230791016</p>
-</section>
-
-
-<footer>
-<p>© 2026 Aditya Website Design</p>
-</footer>
-
-</body>
-</html><!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aditya Website Design</title>
-
-<style>
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#06152f;
-    color:white;
-}
-
-header{
-    background:#0b2a5b;
-    padding:25px;
-    text-align:center;
-}
-
-h1{
-    color:#4db8ff;
-}
-
-section{
-    padding:30px;
-    text-align:center;
-}
-
-.card{
-    background:#0d2345;
-    margin:15px;
-    padding:20px;
-    border-radius:15px;
-}
-
-button{
-    background:#00aaff;
-    color:white;
-    border:none;
-    padding:15px 25px;
-    border-radius:30px;
-    font-size:16px;
-}
-
-a{
-    color:white;
-    text-decoration:none;
-}
-
-footer{
-    background:#041022;
-    text-align:center;
-    padding:15px;
-}
-</style>
-
-</head>
-
-<body>
-
-<header>
-<h1>Aditya Website Design</h1>
-<p>Modern Websites For Your Business</p>
-</header>
-
-<section>
-<h2>Welcome</h2>
-<p>
-We create professional and responsive websites
-to help your business grow online.
-</p>
-
-<a href="https://wa.me/916230791016">
-<button>Contact on WhatsApp</button>
+Chat on WhatsApp
 </a>
 
-</section>
+</div></div></section><!-- =========================
+     FOOTER
+========================= --><footer><p>
+© 2026 <strong>Aditya Website Design</strong>
+</p><p>
+Modern Websites • Responsive Design • Business Solutions
+</p></footer><!-- =========================
+     FLOATING WHATSAPP
+========================= --><a
+href="https://wa.me/916230791016"
+class="whatsapp"
+aria-label="Contact Aditya Website Design on WhatsApp"
 
+«»
 
-<section>
-<h2>Our Services</h2>
-
-<div class="card">
-<h3>Business Website</h3>
-<p>Professional websites for companies and shops.</p>
-</div>
-
-<div class="card">
-<h3>Landing Page Design</h3>
-<p>Attractive pages to promote your services.</p>
-</div>
-
-<div class="card">
-<h3>Website Maintenance</h3>
-<p>Updates and support for your website.</p>
-</div>
-
-</section>
-
-
-<section>
-<h2>Contact</h2>
-<p>WhatsApp: 6230791016</p>
-</section>
-
-
-<footer>
-<p>© 2026 Aditya Website Design</p>
-</footer>
-
-</body>
-</html><!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aditya Website Design</title>
-
-<style>
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#06152f;
-    color:white;
-}
-
-header{
-    background:#0b2a5b;
-    padding:25px;
-    text-align:center;
-}
-
-h1{
-    color:#4db8ff;
-}
-
-section{
-    padding:30px;
-    text-align:center;
-}
-
-.card{
-    background:#0d2345;
-    margin:15px;
-    padding:20px;
-    border-radius:15px;
-}
-
-button{
-    background:#00aaff;
-    color:white;
-    border:none;
-    padding:15px 25px;
-    border-radius:30px;
-    font-size:16px;
-}
-
-a{
-    color:white;
-    text-decoration:none;
-}
-
-footer{
-    background:#041022;
-    text-align:center;
-    padding:15px;
-}
-</style>
-
-</head>
-
-<body>
-
-<header>
-<h1>Aditya Website Design</h1>
-<p>Modern Websites For Your Business</p>
-</header>
-
-<section>
-<h2>Welcome</h2>
-<p>
-We create professional and responsive websites
-to help your business grow online.
-</p>
-
-<a href="https://wa.me/916230791016">
-<button>Contact on WhatsApp</button>
+💬
 </a>
 
-</section>
-
-
-<section>
-<h2>Our Services</h2>
-
-<div class="card">
-<h3>Business Website</h3>
-<p>Professional websites for companies and shops.</p>
-</div>
-
-<div class="card">
-<h3>Landing Page Design</h3>
-<p>Attractive pages to promote your services.</p>
-</div>
-
-<div class="card">
-<h3>Website Maintenance</h3>
-<p>Updates and support for your website.</p>
-</div>
-
-</section>
-
-
-<section>
-<h2>Contact</h2>
-<p>WhatsApp: 6230791016</p>
-</section>
-
-
-<footer>
-<p>© 2026 Aditya Website Design</p>
-</footer>
-
-</body>
-</html><!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aditya Website Design</title>
-
-<style>
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#06152f;
-    color:white;
-}
-
-header{
-    background:#0b2a5b;
-    padding:25px;
-    text-align:center;
-}
-
-h1{
-    color:#4db8ff;
-}
-
-section{
-    padding:30px;
-    text-align:center;
-}
-
-.card{
-    background:#0d2345;
-    margin:15px;
-    padding:20px;
-    border-radius:15px;
-}
-
-button{
-    background:#00aaff;
-    color:white;
-    border:none;
-    padding:15px 25px;
-    border-radius:30px;
-    font-size:16px;
-}
-
-a{
-    color:white;
-    text-decoration:none;
-}
-
-footer{
-    background:#041022;
-    text-align:center;
-    padding:15px;
-}
-</style>
-
-</head>
-
-<body>
-
-<header>
-<h1>Aditya Website Design</h1>
-<p>Modern Websites For Your Business</p>
-</header>
-
-<section>
-<h2>Welcome</h2>
-<p>
-We create professional and responsive websites
-to help your business grow online.
-</p>
-
-<a href="https://wa.me/916230791016">
-<button>Contact on WhatsApp</button>
-</a>
-
-</section>
-
-
-<section>
-<h2>Our Services</h2>
-
-<div class="card">
-<h3>Business Website</h3>
-<p>Professional websites for companies and shops.</p>
-</div>
-
-<div class="card">
-<h3>Landing Page Design</h3>
-<p>Attractive pages to promote your services.</p>
-</div>
-
-<div class="card">
-<h3>Website Maintenance</h3>
-<p>Updates and support for your website.</p>
-</div>
-
-</section>
-
-
-<section>
-<h2>Contact</h2>
-<p>WhatsApp: 6230791016</p>
-</section>
-
-
-<footer>
-<p>© 2026 Aditya Website Design</p>
-</footer>
-
-</body>
-</html><!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aditya Website Design</title>
-
-<style>
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#06152f;
-    color:white;
-}
-
-header{
-    background:#0b2a5b;
-    padding:25px;
-    text-align:center;
-}
-
-h1{
-    color:#4db8ff;
-}
-
-section{
-    padding:30px;
-    text-align:center;
-}
-
-.card{
-    background:#0d2345;
-    margin:15px;
-    padding:20px;
-    border-radius:15px;
-}
-
-button{
-    background:#00aaff;
-    color:white;
-    border:none;
-    padding:15px 25px;
-    border-radius:30px;
-    font-size:16px;
-}
-
-a{
-    color:white;
-    text-decoration:none;
-}
-
-footer{
-    background:#041022;
-    text-align:center;
-    padding:15px;
-}
-</style>
-
-</head>
-
-<body>
-
-<header>
-<h1>Aditya Website Design</h1>
-<p>Modern Websites For Your Business</p>
-</header>
-
-<section>
-<h2>Welcome</h2>
-<p>
-We create professional and responsive websites
-to help your business grow online.
-</p>
-
-<a href="https://wa.me/916230791016">
-<button>Contact on WhatsApp</button>
-</a>
-
-</section>
-
-
-<section>
-<h2>Our Services</h2>
-
-<div class="card">
-<h3>Business Website</h3>
-<p>Professional websites for companies and shops.</p>
-</div>
-
-<div class="card">
-<h3>Landing Page Design</h3>
-<p>Attractive pages to promote your services.</p>
-</div>
-
-<div class="card">
-<h3>Website Maintenance</h3>
-<p>Updates and support for your website.</p>
-</div>
-
-</section>
-
-
-<section>
-<h2>Contact</h2>
-<p>WhatsApp: 6230791016</p>
-</section>
-
-
-<footer>
-<p>© 2026 Aditya Website Design</p>
-</footer>
-
-</body>
-</html>
+</body></html>
